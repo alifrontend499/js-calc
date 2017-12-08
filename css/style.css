@@ -1,0 +1,127 @@
+/*FONTS*/
+@font-face{
+    font-family: "roboto-regular";
+    src:url('../fonts/Roboto-Regular.ttf');
+}
+@font-face{
+    font-family: "roboto-bold";
+    src:url('../fonts/Roboto-Bold.ttf');
+}
+@font-face{
+    font-family: "digital";
+    src:url('../fonts/digital-7.ttf');
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: "roboto-regular";
+/*    background:#333;*/
+}
+/*main css*/
+.calc-outer{
+    background: #fff;
+    width: 600px;
+    margin: 0 auto;
+    padding: 15px 90px;
+}
+
+
+.calculator{
+    width: 100%;
+    background-color: #535353;
+    padding: 35px 25px;
+    border-radius: 10px;
+    -webkit-border-radius: 20px;
+    box-shadow: inset 0px 0px 14px #131313;
+    -webkit-box-shadow: inset 0px 0px 14px #131313;
+}
+.calculations,
+.calc-buttons{
+    display:table;
+    width: 100%;
+}
+.calculations{
+    font-family: digital;
+    background: #cedfcd url('../images/edit-this.png') no-repeat 0 0 / 100% 100%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    margin-bottom: 40px;
+}
+.calculations input[type="text"]{
+    height: 70px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    box-shadow: inset 0px 0px 12px #131313;
+    -webkit-box-shadow: inset 0px 0px 12px #131313;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    padding: 3px 15px;
+    text-align: right;
+    font-size: 60px;
+    font-family: digital;
+    color: #434343;
+    direction: rtl;
+}
+.calculations input[type="text"]:focus{
+    outline: none;
+}
+
+
+.calc-buttons{
+
+}
+.calc-buttons ul{
+    margin: 0 0 16px;
+    padding: 0;
+    list-style-type: none;
+    font-size: 0;
+}
+.calc-buttons ul:last-child{
+    border-bottom: 0px;
+}
+.calc-buttons ul li{
+    font-size: 14px;
+    display: inline-block;
+    width: 25%;
+    height: 60px;
+    line-height: 60px;
+}
+.calc-buttons ul li:nth-child(1){
+    padding-right: 8px;
+}
+.calc-buttons ul li:nth-child(2),
+.calc-buttons ul li:nth-child(3){
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.calc-buttons ul li:nth-child(4){
+    padding-left: 8px;
+}
+.calc-buttons ul li > label{
+    height: 100%;
+    width: 100%;
+    background: #f7f7f7;
+    text-align: center;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    font-family: roboto-bold;
+    font-size: 40px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+}
+.calc-buttons ul li > label:hover{
+    background: #dfdfdf;
+}
+.calc-buttons ul li > label input{
+    position: absolute;
+    visibility: hidden;
+}
