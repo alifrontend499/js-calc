@@ -50,7 +50,7 @@ body{
     cursor: pointer;
 }
 .c-small-img:hover,
-.c-small-img.active{
+li.active .c-small-img{
     filter:brightness(50%);
 }
 .c-big-img {

@@ -1,21 +1,16 @@
 $(function () {
-//    $('.c-slider-left').click(function () {
-//        $(this).parent().addClass('active').siblings().removeClass('active');
-//    });
-});
-
-
-var li = document.querySelectorAll('.c-small-img');
-
-
-
-console.dir(li[0].);
-
-for (var i = 0; i < li.length; i++) {
-    li[i].addEventListener('click', function (e) {
-        this.parentNode.classList.add('hello');
-        this.parentNode.nextSibling.classList.remove('hello');
-        this.parentNode.previousSibling.classList.remove('hello');
+    
+    var active = false;
+    $('.c-small-img').click(function (e) {
+        var smImgSrc = $(this).attr('src');
+        $(this).parent().addClass('active').siblings().removeClass('active');
+        if(active){
+            return;
+        } 
+        active = true;
+        $('.c-big-img').attr('src',smImgSrc,function(){
+            active = false;
+        });
     });
-}
-
+    
+});
