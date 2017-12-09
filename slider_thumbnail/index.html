@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style type="text/css">
+            *{
+                box-sizing: border-box;
+            }
+            .classic-slider{
+                font-size: 0;
+                width: 58%;
+            }
+            .c-slider-left,
+            .c-slider-right{
+                font-size: 14px;
+                display: inline-block;
+                vertical-align: top;
+                height: 500px;
+            }
+            .c-slider-left > ul{
+                list-style: none;
+                margin: 0;
+            }
+            .c-slider-left{
+                width: 160px;   
+                overflow-y: auto;
+            }
+            .c-slider-right{
+                width: calc(100% - 160px);   
+            }
+            .c-slider-right{
+                padding-left: 10px;
+            }
+            .c-slider-inner{
+                position: relative;
+                height: 100%;
+                width: 100%;
+                border: 1px solid #EFEFEF;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+            }
+            .c-small-img,
+            .c-big-img{
+                max-height: 100%;
+                max-width: 100%;
+                -webkit-transition: .3s;
+                -ms-transition: .3s;
+                transition: .3s;
+            }
+            .c-small-img{
+                cursor: pointer;
+            }
+            .c-small-img:hover,
+            .c-small-img.active{
+                filter:brightness(50%);
+            }
+            .c-big-img {
+                margin: auto;
+            }
+            .c-controlls > div{
+                position: absolute;
+                top: 45%;
+            }
+            .c-controlls .c-left{
+                left: 0;
+            }
+            .c-controlls .c-right{
+                right: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="classic-slider">
+
+            <div class="c-slider-left">
+                <ul class="list-inline">
+                    <li>
+                        <img src="images/big-img.jpg" alt="" class="c-small-img img-responsive"/>
+                    </li>
+                    <li>
+                        <img src="images/big-img.jpg" alt="" class="c-small-img img-responsive"/>
+                    </li>
+                    <li>
+                        <img src="images/big-img.jpg" alt="" class="c-small-img img-responsive"/>
+                    </li>
+                    <li>
+                        <img src="images/big-img.jpg" alt="" class="c-small-img img-responsive"/>
+                    </li>
+                    <li>
+                        <img src="images/big-img.jpg" alt="" class="c-small-img img-responsive"/>
+                    </li>
+                    <li>
+                        <img src="images/big-img.jpg" alt="" class="c-small-img img-responsive"/>
+                    </li><li>
+                        <img src="images/big-img.jpg" alt="" class="c-small-img img-responsive"/>
+                    </li>
+                    <li>
+                        <img src="images/big-img.jpg" alt="" class="c-small-img img-responsive"/>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="c-slider-right">
+                <div class="c-slider-inner">
+                    <img src="images/big-img.jpg" alt="" class="c-big-img img-responsive"/>
+                    <div class="c-controlls">
+                        <div class="c-left">
+                            <img src="images/icon/c-left-img.jpg" alt="" />
+                        </div>
+                        <div class="c-right">
+                            <img src="images/icon/c-right-img.jpg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
