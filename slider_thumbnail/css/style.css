@@ -59,6 +59,17 @@ li.active .c-small-img{
 .c-controlls > div{
     position: absolute;
     top: 45%;
+    cursor: pointer;
+    -webkit-transition: .3s;
+    -ms-transition: .3s;
+    transition: .3s;
+}
+.c-controlls > div:hover,
+.c-controlls > div.no_more{
+    filter: brightness(50%);
+}
+.c-controlls > div.no_more{
+    cursor: no-drop;
 }
 .c-controlls .c-left{
     left: 0;
