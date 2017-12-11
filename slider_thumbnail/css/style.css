@@ -37,6 +37,8 @@ body{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding: 40px;
+    background: lightgray;
 }
 .c-small-img,
 .c-big-img{
@@ -52,6 +54,9 @@ body{
 .c-small-img:hover,
 li.active .c-small-img{
     filter:brightness(50%);
+}
+li.active .c-small-img{
+    cursor: default;
 }
 .c-big-img {
     margin: auto;
