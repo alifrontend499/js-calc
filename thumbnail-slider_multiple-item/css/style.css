@@ -56,14 +56,13 @@ li.active .c-small-img{
 .c-slider-right-inner,
 .c-slider-right-inner > ul,
 .c-slider-right-inner > ul > li,
-.c-slider-right-inner .c-slide{
+.c-slider-right-inner .c-slide,
+.c-slider-right-inner .c-slide > a{
     height: 100%;
     width: 100%;
 }
 .c-slider-right-inner .c-slide{
-    display: -webkit-flex;
-    display: -moz-flexbox;
-    display: flex;
+
 }
 .c-slider-right-inner > ul{
     white-space: nowrap;
@@ -76,8 +75,15 @@ li.active .c-small-img{
     display: table-cell;
     vertical-align: top;
 }
-.c-slider-right-inner .c-slide > img{
+.c-slider-right-inner .c-slide > a{
+    display: -webkit-flex;
+    display: -moz-flexbox;
+    display: flex;
+}
+.c-slider-right-inner .c-slide > a img{
     margin: auto;
+    display: block;
+    max-width: 100%;
 }
 .c-slider-right-inner{
     position: relative;
@@ -105,4 +111,7 @@ li.active .c-small-img{
 }
 .c-controlls .c-right{
     right: 0;
+}
+.fancybox-container{
+    z-index: 99999999999;   
 }

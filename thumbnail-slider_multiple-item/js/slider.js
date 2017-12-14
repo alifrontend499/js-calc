@@ -77,4 +77,6 @@ $(function () {
         lensShape: "round",
         lensSize: 200
     });
+
+    $(".fancybox").fancybox();
 });
