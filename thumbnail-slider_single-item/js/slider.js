@@ -1,5 +1,5 @@
 $(function () {
-
+    
     $('.c-small-img').click(function (e) {
         if ($(this).parent().hasClass('active')) {
             return;
@@ -48,4 +48,5 @@ $(function () {
 //           alert('next');
         }
     });
+    
 });
