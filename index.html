@@ -17,7 +17,7 @@
                 <div class="calc-buttons">
                     <ul>
                         <li>
-                            <label class="main_input">
+                            <label class="main_input btn">
                                 <input type="radio" name="calcinput" value="7"/>
                                 <span>7</span>
                             </label>
@@ -35,7 +35,7 @@
                             </label>
                         </li>
                         <li>
-                            <label class="main_input">
+                            <label class="main_input" onclick="devide()">
                                 <input type="radio" name="calcinput" value="/"/>
                                 <span>/</span>
                             </label>
@@ -61,7 +61,7 @@
                             </label>
                         </li>
                         <li>
-                            <label class="main_input">
+                            <label class="main_input" onclick="multiply()">
                                 <input type="radio" name="calcinput" value="x"/>
                                 <span>x</span>
                             </label>
@@ -87,7 +87,7 @@
                             </label>
                         </li>
                         <li>
-                            <label class="main_input">
+                            <label class="main_input" onclick="subtract()">
                                 <input type="radio" name="calcinput" value="-"/>
                                 <span>-</span>
                             </label>
@@ -107,13 +107,13 @@
                             </label>
                         </li>
                         <li>
-                            <label class="main_input">
+                            <label class="main_input" onclick="plus()">
                                 <input type="radio" name="calcinput" value="+"/>
                                 <span>+</span>
                             </label>
                         </li>
                         <li>
-                            <label class="main_input">
+                            <label class="main_input" onclick="equal()">
                                 <input type="radio" name="calcinput" value="="/>
                                 <span>=</span>
                             </label>
@@ -122,8 +122,9 @@
                 </div>
             </div>
         </div>
--->
-        
+
+
+        <script src="js/jquery.js"></script>
         <script src="js/calculator.js"></script>
     </body>
 </html>
