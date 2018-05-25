@@ -7,17 +7,18 @@
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
+      <div class="test"></div>
         <h1 style="text-align: center;color: #fff;">Calculator</h1>
 
         <div class="calc-outer">
             <div class="calculator">
                 <div class="calculations">
-                    <input type="text" value="0" autocomplete="off" dir="ltr" id="calc_input" />
+                    <input type="text" autocomplete="off" dir="ltr" id="calc_input" />
                 </div>
                 <div class="calc-buttons">
                     <ul>
                         <li>
-                            <label class="main_input btn">
+                            <label class="main_input">
                                 <input type="radio" name="calcinput" value="7"/>
                                 <span>7</span>
                             </label>
@@ -35,7 +36,7 @@
                             </label>
                         </li>
                         <li>
-                            <label class="main_input" onclick="devide()">
+                            <label class="main_input devide">
                                 <input type="radio" name="calcinput" value="/"/>
                                 <span>/</span>
                             </label>
@@ -61,7 +62,7 @@
                             </label>
                         </li>
                         <li>
-                            <label class="main_input" onclick="multiply()">
+                            <label class="main_input multiply">
                                 <input type="radio" name="calcinput" value="x"/>
                                 <span>x</span>
                             </label>
@@ -87,7 +88,7 @@
                             </label>
                         </li>
                         <li>
-                            <label class="main_input" onclick="subtract()">
+                            <label class="main_input minus">
                                 <input type="radio" name="calcinput" value="-"/>
                                 <span>-</span>
                             </label>
@@ -101,19 +102,19 @@
                             </label>
                         </li>
                         <li>
-                            <label class="main_input">
+                            <label class="main_input dot">
                                 <input type="radio" name="calcinput" value="."/>
                                 <span>.</span>
                             </label>
                         </li>
                         <li>
-                            <label class="main_input" onclick="plus()">
+                            <label class="main_input plus">
                                 <input type="radio" name="calcinput" value="+"/>
                                 <span>+</span>
                             </label>
                         </li>
                         <li>
-                            <label class="main_input" onclick="equal()">
+                            <label class="main_input equal">
                                 <input type="radio" name="calcinput" value="="/>
                                 <span>=</span>
                             </label>

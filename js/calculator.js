@@ -1,33 +1,50 @@
 
-window.onload = function(e){
-    var calc_input, btn, inputData;
-    calc_input = document.getElementById('calc_input');
-    btn = document.querySelectorAll('label');
+window.onload = function() {
+  var plus, minus, devide, multiply, equal, dot;
+  plus = document.querySelector('.plus');
+  minus = document.querySelector('.minus');
+  devide = document.querySelector('.devide');
+  multiply = document.querySelector('.multiply');
+  equal = document.querySelector('.equal');
 
-    // loop through labels
-    for (var i = 0; i < btn.length; i++) {
-      btn[i].addEventListener('click', actionPerform);
-    }
+  var test = document.querySelector('.test');
+  var mainInp = document.querySelector('#calc_input');
+  var valBtn = document.querySelectorAll('.main_input');
+  var mainVal1 = "";
+  var mainVal2 = "";
 
-    function actionPerform(e) {
+
+  valBtn.forEach(function(elem) {
+    elem.addEventListener('click', function(e) {
       e.preventDefault();
-      inputData = this.firstElementChild.value;
-      calc_input.value += inputData;
-    }
+      var curVal = this.children[1].innerText;
+      mainInp.value += curVal;
+    });
+  });
 
-    function plus () {
-
-    }
-    function minus () {
-
-    }
-    function multiply () {
-
-    }
-    function devide () {
-
-    }
-    function equal () {
-
-    }
+  if (plus !== null) {
+    plus.addEventListener('click', function(e) {
+      test.innerHTML = 'Plus';
+    });
+  }
+  if (minus !== null) {
+    minus.addEventListener('click', function(e) {
+      test.innerHTML = 'Minus';
+    });
+  }
+  if (multiply !== null) {
+    multiply.addEventListener('click', function(e) {
+      test.innerHTML = 'Multiply';
+    });
+  }
+  if (devide !== null) {
+    devide.addEventListener('click', function(e) {
+      test.innerHTML = 'Devide';
+    });
+  }
+  if (equal !== null) {
+    equal.addEventListener('click', function(e) {
+      test.innerHTML = 'Equal';
+    });
+  }
 }

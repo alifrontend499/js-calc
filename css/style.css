@@ -125,3 +125,14 @@ body{
     position: absolute;
     visibility: hidden;
 }
+
+
+
+.test {
+  background-color: red;
+  position: fixed;
+  min-width: 100px;
+  padding: 10px;
+  font-size: 30px;
+  color: #fff;
+}
