@@ -48,3 +48,88 @@ window.onload = function() {
     });
   }
 }
+
+
+// CALCULATOR
+(function() {
+  let input = document.querySelector('.enter-data');
+  let disData = document.querySelector('.display-data > span');
+  let plusBtn = document.querySelector('.plus');
+  let minusBtn = document.querySelector('.minus');
+  let multiplyBtn = document.querySelector('.multiply');
+  let devideBtn = document.querySelector('.devide');
+  let equalBtn = document.querySelector('.equal');
+  let value1, value2, calcMethod;
+
+  // MAIN FUNCTION
+  function dispData(sign, method) {
+    let inpVal = input.value;
+    disData.innerHTML = inpVal + " " + sign;
+    value1 = inpVal;
+    calcMethod = method;
+    input.value = "";
+  }
+
+  // PLUS
+  plusBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    dispData("+", "plus");
+  });
+  // MINUS
+  minusBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    dispData("-", "minus");
+  });
+  // MULTIPLY
+  multiplyBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    dispData("*", "multiply");
+  });
+  // DEVIDE
+  devideBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    dispData("/", "devide");
+  });
+  // EQUALBTN
+  equalBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    if(input.value !== "") {
+      let inpVal = input.value;
+      value2 = inpVal;
+      let finalData = calcs(value1, value2, calcMethod);
+      disData.innerHTML = finalData;
+      input.value = "";
+    } else {
+      value1 = 0;
+      value2 = 0;
+      calcMethod = "no_value";
+      let finalData = calcs(value1, value2, calcMethod);
+      disData.innerHTML = finalData;
+    }
+  });
+
+  // ALL CALCULATOINS
+  function calcs(val1, val2, method) {
+    if(method !== undefined) {
+      if(method == "plus") {
+        let finalVal = parseInt(val1) + parseInt(val2);
+        return val1 + " + " + val2 + " = " + finalVal;
+      }
+      if(method == "minus") {
+        let finalVal = parseInt(val1) - parseInt(val2);
+        return val1 + " - " + val2 + " = " + finalVal;
+      }
+      if(method == "multiply") {
+        let finalVal = parseInt(val1) * parseInt(val2);
+        return val1 + " * " + val2 + " = " + finalVal;
+      }
+      if(method == "devide") {
+        let finalVal = parseInt(val1) / parseInt(val2);
+        return val1 + " / " + val2 + " = " + finalVal;
+      }
+      if(method == "no_value") {
+        return "Please enter values";
+      }
+    }
+  }
+})();

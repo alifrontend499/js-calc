@@ -125,6 +125,15 @@ body{
     position: absolute;
     visibility: hidden;
 }
+.result {
+  background: #cedfcd url('../images/edit-this.png') no-repeat 0 0 / 100% 100%;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  opacity: .5;
+  text-align: right;
+  font-size: 20px;
+}
 
 
 
